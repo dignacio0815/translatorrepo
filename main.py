@@ -32,7 +32,7 @@ class SpanishMoodPage(webapp2.RequestHandler):
             "mood" : mood
         }
         self.response.write(spanish_template.render(mood_dict)) 
-       
+    '''   
     def get(self):
         self.response.write("query executed")
         # Instantiates a client
@@ -47,17 +47,44 @@ class SpanishMoodPage(webapp2.RequestHandler):
             target_language=target)
         self.response.write(u'Text: {}'.format(text))
         self.response.write(u'Translation: {}'.format(translation['translatedText']))
-
+    '''
 
 class SpanishPage(webapp2.RequestHandler):
     def get(self):
         about_template = the_jinja_env.get_template('html/spanish.html')
-        
+        self.response.write(about_template.render()) 
+    '''
     def post(self): 
         html = the_jinja_env.get_template('html/spanish.html')
-
+    '''
+    
+class JapanesePage(webapp2.RequestHandler):
+    def get(self):
+        about_template = the_jinja_env.get_template('html/japanese.html')
+        self.response.write(about_template.render())
+        
+class VietnamesePage(webapp2.RequestHandler):
+    def get(self):
+        about_template = the_jinja_env.get_template('html/vietnamese.html')
+        self.response.write(about_template.render())
+        
+class TagalogPage(webapp2.RequestHandler):
+    def get(self):
+        about_template = the_jinja_env.get_template('html/tagalog.html')
+        self.response.write(about_template.render())
+    
+class EnglishPage(webapp2.RequestHandler):
+    def get(self):
+        about_template = the_jinja_env.get_template('html/english.html')
+        self.response.write(about_template.render())
+        
 app = webapp2.WSGIApplication([
     ('/', AboutPage),
     ('/spanish', SpanishPage),
+    ('/japanese', JapanesePage),
+    ('/vietnamese', VietnamesePage),
+    ('/tagalog', TagalogPage),
+    ('/english', EnglishPage),
+    ('/englishmood', EnglishMoodPage)
     ('/spanishmood', SpanishMoodPage)
 ], debug=True)
