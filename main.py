@@ -48,16 +48,16 @@ class SpanishMoodPage(webapp2.RequestHandler):
         self.response.write(u'Text: {}'.format(text))
         self.response.write(u'Translation: {}'.format(translation['translatedText']))
 
-'''        
+
 class SpanishPage(webapp2.RequestHandler):
     def get(self):
-        about_template = the_jinja_env.get_template('templates/spanish.html')
+        about_template = the_jinja_env.get_template('html/spanish.html')
         
     def post(self): 
-        html = the_jinja_env.get_template('templates/spanish.html')
-'''
+        html = the_jinja_env.get_template('html/spanish.html')
 
 app = webapp2.WSGIApplication([
     ('/', AboutPage),
+    ('/spanish', SpanishPage),
     ('/spanishmood', SpanishMoodPage)
 ], debug=True)
