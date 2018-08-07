@@ -2,19 +2,23 @@ import webapp2
 from random import shuffle
 import jinja2
 import os
+from google.appengine.ext import vendor
 
 # Imports the Google Cloud client library
-from google.cloud import translate
+#from google.cloud import translate
 
 #libraries for APIs
-from google.appengine.api import urlfetch
+#from google.appengine.api import urlfetch
 import json
 
 the_jinja_env = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
-
+    
+if os.path.isdir(os.path.join(os.getcwd(), 'lib')):
+    vendor.add('lib')
+    
 class AboutPage(webapp2.RequestHandler):
     def get(self):
         html_template = the_jinja_env.get_template('html/intro.html')
