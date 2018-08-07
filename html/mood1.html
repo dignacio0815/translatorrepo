@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome</title>
+  </head>
+  <center>
+  <body>
+    <h1>Welcome to T.App!</h1>
+    <h1>Translator App</h1>
+    <img height=auto width="300px" src="https://luwo-ldocs-prod.imgix.net/2018/1/26/2bccc91d-078b-4029-997a-c0757299fc3f.jpeg?w=1024&auto=format">
+    <h2>You wanna T.App that?</h2>
+   
+    <form method=POST action="/" >
+      {% for answer in answers %}
+          {%if answer['is_correct'] == True %}
+            <input type="radio" name="selected_answer" value="correct">{{answer['text']}} </input><br>
+          {% else %}
+            <input type="radio" name="selected_answer" value="false">{{answer['text']}} </input><br>
+          {% endif %}
+        {% endfor %}
+      <input type="submit">
+    </form>
+
+      <input type="submit" value="Go!">
+    </form>
+  </body>
+  </center>
+</html>
