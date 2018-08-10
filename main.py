@@ -107,7 +107,8 @@ class SpanishPage(webapp2.RequestHandler):
             # List.append(elem)
             the_variable_dict={
                 "English" : moods['happyList'],
-                "Other" : happySpanishList
+                "Other" : happySpanishList,
+                "url" : "happy"
             }
             print("The variabe dict")
             print(the_variable_dict)
@@ -122,7 +123,8 @@ class SpanishPage(webapp2.RequestHandler):
             # List.append(elem)
             the_variable_dict={
                 "English" : moods['sadList'],
-                "Other" : sadSpanishList
+                "Other" : sadSpanishList,
+                "url" : "sad"
             }
             print("The variabe dict")
             print(the_variable_dict)
@@ -137,7 +139,8 @@ class SpanishPage(webapp2.RequestHandler):
             # List.append(elem)
             the_variable_dict={
                 "English" : moods['angryList'],
-                "Other" : angrySpanishList
+                "Other" : angrySpanishList,
+                "url" : "angry"
             }
             print("The variabe dict")
             print(the_variable_dict)
@@ -152,7 +155,8 @@ class SpanishPage(webapp2.RequestHandler):
             # List.append(elem)
             the_variable_dict={
                 "English" : moods['neutralList'],
-                "Other" : neutralSpanishList
+                "Other" : neutralSpanishList,
+                "url" : "neutral"
             }
             print("The variabe dict")
             print(the_variable_dict)
@@ -167,7 +171,8 @@ class SpanishPage(webapp2.RequestHandler):
             # List.append(elem)
             the_variable_dict={
                 "English" : moods['quirkyList'],
-                "Other" : quirkySpanishList
+                "Other" : quirkySpanishList,
+                "url" : "quirky"
             }
             print("The variabe dict")
             print(the_variable_dict)
@@ -190,7 +195,8 @@ class JapanesePage(webapp2.RequestHandler):
             # List.append(elem)
             the_variable_dict={
                 "English" : moods['happyList'],
-                "Other" : happyJapaneseList
+                "Other" : happyJapaneseList,
+                'url' : "japanese"
             }
             print("The variabe dict")
             print(the_variable_dict)
@@ -205,7 +211,8 @@ class JapanesePage(webapp2.RequestHandler):
             # List.append(elem)
             the_variable_dict={
                 "English" : moods['sadList'],
-                "Other" : sadJapaneseList
+                "Other" : sadJapaneseList,
+                "url" : "japanese"
             }
             print("The variabe dict")
             print(the_variable_dict)
@@ -220,7 +227,8 @@ class JapanesePage(webapp2.RequestHandler):
             # List.append(elem)
             the_variable_dict={
                 "English" : moods['angryList'],
-                "Other" : angryJapaneseList
+                "Other" : angryJapaneseList,
+                "url" : "japanese"
             }
             print("The variabe dict")
             print(the_variable_dict)
@@ -235,7 +243,8 @@ class JapanesePage(webapp2.RequestHandler):
             # List.append(elem)
             the_variable_dict={
                 "English" : moods['neutralList'],
-                "Other" : neutralJapaneseList
+                "Other" : neutralJapaneseList,
+                "url" : "japanese"
             }
             print("The variabe dict")
             print(the_variable_dict)
@@ -250,7 +259,8 @@ class JapanesePage(webapp2.RequestHandler):
             # List.append(elem)
             the_variable_dict={
                 "English" : moods['quirkyList'],
-                "Other" : quirkyJapaneseList
+                "Other" : quirkyJapaneseList,
+                "url" : "japanese"
             }
             print("The variabe dict")
             print(the_variable_dict)
@@ -272,7 +282,9 @@ class VietnamesePage(webapp2.RequestHandler):
             # List.append(elem)
             the_variable_dict={
                 "English" : moods['happyList'],
-                "Other" : happyVietnameseList
+                "Other" : happyVietnameseList,
+                "url" : "vietnamese"
+
             }
             print("The variabe dict")
             print(the_variable_dict)
@@ -287,7 +299,8 @@ class VietnamesePage(webapp2.RequestHandler):
             # List.append(elem)
             the_variable_dict={
                 "English" : moods['sadList'],
-                "Other" : sadVietnameseList
+                "Other" : sadVietnameseList,
+                "url" : "vietnamese"
             }
             print("The variabe dict")
             print(the_variable_dict)
@@ -302,7 +315,8 @@ class VietnamesePage(webapp2.RequestHandler):
             # List.append(elem)
             the_variable_dict={
                 "English" : moods['angryList'],
-                "Other" : angryVietnameseList
+                "Other" : angryVietnameseList,
+                "url" : "vietnamese"
             }
             print("The variabe dict")
             print(the_variable_dict)
@@ -317,7 +331,8 @@ class VietnamesePage(webapp2.RequestHandler):
             # List.append(elem)
             the_variable_dict={
                 "English" : moods['neutralList'],
-                "Other" : neutralVietnameseList
+                "Other" : neutralVietnameseList,
+                "url" : "vietnamese"
             }
             print("The variabe dict")
             print(the_variable_dict)
@@ -332,7 +347,8 @@ class VietnamesePage(webapp2.RequestHandler):
             # List.append(elem)
             the_variable_dict={
                 "English" : moods['quirkyList'],
-                "Other" : quirkyVietnameseList
+                "Other" : quirkyVietnameseList,
+                "url" : "vietnamese"
             }
             print("The variabe dict")
             print(the_variable_dict)
@@ -354,7 +370,8 @@ class TagalogPage(webapp2.RequestHandler):
             # List.append(elem)
             the_variable_dict={
                 "English" : moods['happyList'],
-                "Other" : happyTagalogList
+                "Other" : happyTagalogList,
+                "url" : "tagalog"
             }
             print("The variabe dict")
             print(the_variable_dict)
@@ -369,7 +386,8 @@ class TagalogPage(webapp2.RequestHandler):
             # List.append(elem)
             the_variable_dict={
                 "English" : moods['sadList'],
-                "Other" : sadTagalogList
+                "Other" : sadTagalogList,
+                "url" : "tagalog"
             }
             print("The variabe dict")
             print(the_variable_dict)
@@ -384,7 +402,8 @@ class TagalogPage(webapp2.RequestHandler):
             # List.append(elem)
             the_variable_dict={
                 "English" : moods['angryList'],
-                "Other" : angryTagalogList
+                "Other" : angryTagalogList,
+                "url" : "tagalog"
             }
             print("The variabe dict")
             print(the_variable_dict)
@@ -399,7 +418,8 @@ class TagalogPage(webapp2.RequestHandler):
             # List.append(elem)
             the_variable_dict={
                 "English" : moods['neutralList'],
-                "Other" : neutralTagalogList
+                "Other" : neutralTagalogList,
+                "url" : "tagalog"
             }
             print("The variabe dict")
             print(the_variable_dict)
@@ -414,7 +434,8 @@ class TagalogPage(webapp2.RequestHandler):
             # List.append(elem)
             the_variable_dict={
                 "English" : moods['quirkyList'],
-                "Other" : quirkyTagalogList
+                "Other" : quirkyTagalogList,
+                "url" : "tagalog"
             }
             print("The variabe dict")
             print(the_variable_dict)
