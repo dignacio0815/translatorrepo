@@ -58,54 +58,10 @@ def test_api():
 moods = {
             "happyList" : ["Hi!", "How are you?","I am so happy to meet you"],
             "sadList" : ["I am sad.", "Are you sad?", "I am not sorry."],
-            "angryList" : ["I do not like you.", "You make me very mad"]  
+            "angryList" : ["I do not like you.", "You make me very mad"],
+            "neutralList" : ["Nah, I am good.", "Maybe next time", "Sure"],
+            "quirkyList" : ["That is crazy!","You are crazy!", "Oh my goodness!"]
     }
-#     "happyDict" : {
-#         "title":"Welcome to the translate app",
-#         "phraseOne": "Phrase One",
-#         "phraseOneTrans": "hello",
-#         "phraseTwo": "Phrase Two",
-#         "phraseTwoTrans": "bye"
-#         },
-    
-#     "sadDict" : {
-#         "title":"Welcome to the translate app",
-#         "phraseOne": "Phrase One",
-#         "phraseOneTrans": "hello",
-#         "phraseTwo": "Phrase Two",
-#         "phraseTwoTrans": "bye"
-#     },
-        
-#     "angryDict" :{
-#             "title":"Welcome to the translate app",
-#             "phraseOne": "Phrase One",
-#             "phraseOneTrans": "hello",
-#             "phraseTwo": "Phrase Two",
-#             "phraseTwoTrans": "bye"
-#         },
-        
-#     "neutralDict" :{
-#             "title":"Welcome to the translate app",
-#             "phraseOne": "Phrase One",
-#             "phraseOneTrans": "hello",
-#             "phraseTwo": "Phrase Two",
-#             "phraseTwoTrans": "bye"
-#         },
-        
-#     "quirkyDict" : {
-#             "title":"Welcome to the translate app",
-#             "phraseOne": "Phrase One",
-#             "phraseOneTrans": "hello",
-#             "phraseTwo": "Phrase Two",
-#             "phraseTwoTrans": "bye"
-#         },
-# }
-'''
-the_variable_dict = {
-    "moods" : moods
-}
-'''
-# The target language
 
 text = 'How are you?'
 target = 'jp'
@@ -215,13 +171,34 @@ class SpanishPage(webapp2.RequestHandler):
             # do this
             
         elif moodType == 'neutral': 
+            neutralSpanishList =[]
+            for phrase in moods["neutralList"]:
+                neutralSpanishList.append(translate_text(phrase, 'es'))
+            # List.append(elem)
+            the_variable_dict={
+                "English" : moods['neutralList'],
+                "Other" : neutralSpanishList
+            }
+            print("The variabe dict")
+            print(the_variable_dict)
             neutral_template = the_jinja_env.get_template('html/moods/neutral.html')
-            self.response.write(neutral_template.render(moods['neutralDict'])) 
+            self.response.write(neutral_template.render(the_variable_dict))
             # do this
             
         else:
-            quirky_template = the_jinja_env.get_template('html/moods/quirky.html')
-            self.response.write(quirky_template.render(moods['quirkyDict'])) 
+            quirkySpanishList =[]
+            for phrase in moods["quirkyList"]:
+                quirkySpanishList.append(translate_text(phrase, 'es'))
+            # List.append(elem)
+            the_variable_dict={
+                "English" : moods['quirkyList'],
+                "Other" : quirkySpanishList
+            }
+            print("The variabe dict")
+            print(the_variable_dict)
+            neutral_template = the_jinja_env.get_template('html/moods/quirky.html')
+            self.response.write(neutral_template.render(the_variable_dict))
+   
         
         # html = the_jinja_env.get_template('html/spanish.html')
 class JapanesePage(webapp2.RequestHandler):
@@ -232,28 +209,78 @@ class JapanesePage(webapp2.RequestHandler):
     def post(self): 
         moodType = self.request.get('mood')
         if moodType == 'happy':
+            happyJapaneseList =[]
+            for phrase in moods["happyList"]:
+                happyJapaneseList.append(translate_text(phrase, 'ja'))
+            # List.append(elem)
+            the_variable_dict={
+                "English" : moods['happyList'],
+                "Other" : happyJapaneseList
+            }
+            print("The variabe dict")
+            print(the_variable_dict)
             about_template = the_jinja_env.get_template('html/moods/happy.html')
             self.response.write(about_template.render(the_variable_dict)) 
             # do this
             # 
         elif moodType == 'sad':
+            sadJapaneseList =[]
+            for phrase in moods["happyList"]:
+                happyJapaneseList.append(translate_text(phrase, 'es'))
+            # List.append(elem)
+            the_variable_dict={
+                "English" : moods['sadList'],
+                "Other" : sadJapaneseList
+            }
+            print("The variabe dict")
+            print(the_variable_dict)
             sad_template = the_jinja_env.get_template('html/moods/sad.html')
-            self.response.write(sad_template.render(moods['sadDict'])) 
+            self.response.write(sad_template.render(the_variable_dict)) 
             # do this
             
         elif moodType == 'angry':
+            angryJapaneseList =[]
+            for phrase in moods["angryList"]:
+                angryJapaneseList.append(translate_text(phrase, 'ja'))
+            # List.append(elem)
+            the_variable_dict={
+                "English" : moods['angryList'],
+                "Other" : angryJapaneseList
+            }
+            print("The variabe dict")
+            print(the_variable_dict)
             angry_template = the_jinja_env.get_template('html/moods/angry.html')
-            self.response.write(angry_template.render(moods['angryDict'])) 
+            self.response.write(angry_template.render(the_variable_dict))
             # do this
             
         elif moodType == 'neutral': 
+            neutralJapaneseList =[]
+            for phrase in moods["neutralList"]:
+                neutralJapaneseList.append(translate_text(phrase, 'ja'))
+            # List.append(elem)
+            the_variable_dict={
+                "English" : moods['neutralList'],
+                "Other" : neutralJapaneseList
+            }
+            print("The variabe dict")
+            print(the_variable_dict)
             neutral_template = the_jinja_env.get_template('html/moods/neutral.html')
-            self.response.write(neutral_template.render(moods['neutralDict'])) 
+            self.response.write(neutral_template.render(the_variable_dict)) 
             # do this
             
         else:
+            quirkyJapaneseList =[]
+            for phrase in moods["quirkyList"]:
+                quirkyJapaneseList.append(translate_text(phrase, 'ja'))
+            # List.append(elem)
+            the_variable_dict={
+                "English" : moods['quirkyList'],
+                "Other" : quirkyJapaneseList
+            }
+            print("The variabe dict")
+            print(the_variable_dict)
             quirky_template = the_jinja_env.get_template('html/moods/quirky.html')
-            self.response.write(quirky_template.render(moods['quirkyDict'])) 
+            self.response.write(quirky_template.render(the_variable_dict)) 
         
         
 class VietnamesePage(webapp2.RequestHandler):
